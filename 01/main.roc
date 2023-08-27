@@ -23,7 +23,7 @@ nMax = \list, n ->
     |> List.sublist { start: 0, len: n}
 
 main =
-    result <- File.readUtf8 (Path.fromStr "input.txt") |> Task.attempt
+    result <- File.readUtf8 (Path.fromStr "01/input.txt") |> Task.attempt
     fileContent = when result is 
         Ok content -> content
         _ -> ""
